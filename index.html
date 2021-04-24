@@ -10,14 +10,61 @@
 
 <body>
 
+    <h1>선언적 렌더링</h1>
+    <li>
+        DOM에서 데이터를 선언적으로 렌더링 할 수 있음.
+    </li>
+    <li> 데이터와 DOM은 연결되어 있으며, 모든 건 반응형!</li>
+    <li>app.message를 다른 값으로 설정하면 그에 따라 자동으로 값이 업데이트 됨.</li>
+
+    <h2>Ex</h2>
+
     <div id="app">
         {{ message }}
     </div>
+
+    <hr>
+
+    <h1>디렉티브</h1>
+    <li>Vue에서 제공하는 특수 속성</li>
+    <li>v- 접두어가 붙어있음</li>
+
+    <h2>Ex</h2>
+
+    <h2>바인딩</h2>
+    <h4>v-bind:title="message" : 해당 요소의 title 속성을 Vue 인스턴스의 message값으로 최신 상태를 유지함.</h4>
 
     <div id="app-2">
         <span v-bind:title="message">
             이 위에 마우스를 올리면 동적으로 바인딩 된 title을 볼 수 있습니다.
         </span>
+    </div>
+
+
+    <h4>v-if="seen" : </h4>
+
+    <div id="app-3">
+        <p v-if="seen">
+            app-3의 seen값이 true라면 이 글을 볼 수 있습니다. 콘솔에 app3.seen = false; 를 입력하면 글이 사라집니다.
+        </p>
+    </div>
+
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ol>
+    </div>
+
+    <div id="app-5">
+        <p>{{ count }}</p>
+        <button v-on:click="addCount">add</button>
+    </div>
+
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
     </div>
 
 </body>

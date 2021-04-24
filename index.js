@@ -5,10 +5,47 @@ var app = new Vue({
   },
 });
 
-
 var app2 = new Vue({
-    el : "#app-2",
-    data: {
-        message : '이 페이지는 ' + new Date() + ' 에 로드 되었습니다.'
-    }
+  el: "#app-2",
+  data: {
+    message: "이 페이지는 " + new Date() + " 에 로드 되었습니다.",
+  },
 });
+
+var app3 = new Vue({
+  el: "#app-3",
+  data: {
+    seen: true,
+  },
+});
+
+var app4 = new Vue({
+  el: "#app-4",
+  data: {
+    todos: [
+      { text: "Vue 배우기" },
+      { text: "코딩테스트 고득점 Kit 풀기" },
+      { text: "1일 1커밋" },
+    ],
+  },
+});
+
+var app5 = new Vue({
+    el : '#app-5',
+    data : {
+        count : 0
+    },
+    methods : {
+        addCount : function () {
+            this.count++;            
+        }
+    }
+})
+
+
+var app6 = new Vue({
+  el : '#app-6',
+  data : {
+    message : '양방향 바인딩'
+  }
+})
