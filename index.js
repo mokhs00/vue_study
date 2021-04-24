@@ -1,3 +1,21 @@
+Vue.component('todo-item', {
+  props : ['todo'],
+  template: '<li>{{ todo.text }}</li>'
+})
+
+var app7 = new Vue({
+  el : '#app-7',
+  data : {
+    todoList : [
+      { id : 0, text : 'Vue Study' },
+      { id : 1, text : 'Vue 복습' },
+      { id : 2, text : 'Vue Study Git Push' }
+    ]
+  }
+})
+
+
+
 var app = new Vue({
   el: "#app",
   data: {
