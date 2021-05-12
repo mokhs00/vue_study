@@ -6,15 +6,27 @@
     <!-- Import Styles -->
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- Import Vue.js -->
-    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
   </head>
   <body>
     <div id="app">
-      <!-- js Expression -->
-      <h1>{{ product }}</h1>
-      <p> {{ description }} </p>
+      <div class="nav-bar"></div>
+      
+      <div class="product-display">
+        <div class="product-container">
+          <div class="product-image">
+            <!-- image goes here -->
+            <!-- v-bind shorthand -->
+            <img :src="image">
+          </div>
+          <div class="product-info">
+            <h1>{{ product }}</h1>
+          </div>
+
+          <a :href="url">Naver</a>
+        </div>
+      </div>
     </div>
-    
 
     <!-- Import App -->
     <script src="./main.js"></script>
