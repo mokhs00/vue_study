@@ -20,6 +20,9 @@ export default {
     methods: {
         open(index){
             this.$emit('open', index)
+        },
+        addCount(index){
+            this.$emit('addCount', index)
         }
     },
 }
