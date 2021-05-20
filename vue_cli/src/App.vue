@@ -1,18 +1,27 @@
 <template>
-  <div>
-    <img alt="Vue logo" src="./assets/logo.png">  
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div v-for="(room, index) in rooms" :key="index">
+    {{ index }}
+    <h4>{{ room.name }}</h4>
+    <p>{{ room.price }}</p>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+
+  },
+  data() {
+    return {
+      rooms : [
+        {name: 'A 원룸', price: '70 만원'},
+        {name: 'B 원룸', price: '100 만원'}
+      ]
+    }
+  },
+  
 }
 </script>
 
